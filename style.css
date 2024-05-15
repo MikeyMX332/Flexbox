@@ -4,7 +4,36 @@ body {
 }
 
 .container {
+    width: 399px;
     display: flex;
+    height: 500px;
+    /* Flex Wrap */
+
+    flex-wrap: nowrap;/* Valor por Default. Esto hace que los items se ajusten al ancho disponible, sin dar salto de linea. */
+
+    flex-wrap: wrap; /* Esto dara saltos de lineA en los items cuando ya no hay espacio disponible. Si el contenedor no tiene alto definido se ajustara automaticamente */
+
+    /*Esta propiedad se trabaja con multiples lineas  */
+
+    /* Alaing Content */
+
+   /*  align-content: normal; */ /* Valor por default */
+    /* align-content: flex-start; */ /* Ajustas las lineas del eje transversal. Alinean hacia arriba. */
+    /* align-content: flex-end; */ /*  Ahustas las lineas al final del eje transversal.  Alinea hacaia abajo. */
+    /* lign-content: center; */ /* Ajusta las lineas al centro del eje transversal. Alinea hacia el centro. */
+    /* align-content: space-around; */ /* Distribuye el espacio al rededor de las lineas. (arriba y abajo) */
+    /* align-content: space-between; */ /* Distribuye el espacio entre las lineas. Sin considerar el contenedor */
+   /*  align-content: space-evenly; */ /* Distribuye el espacio proporcionalmente entre las lineas y el contenedor */
+    /* align-content: stretch; */ /* Va a crecer la altura dse los items en el espacio disponible del eje */
+    align-content: center;
+    align-content: space-between;
+    align-content: stretch;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-content: last baseline;
+
+
 background-color: blue;
 }
 
