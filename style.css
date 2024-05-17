@@ -2,39 +2,47 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}   
+}    
 
 body {
  background-color: rgb(60, 60, 60);
  font-family: sans-serif;
 }
-/* 
-Gap-> Espacio entre los elementos.
-
-recibe valores de números con unidades relativas o absolutas
-*/
 
 .container {
-    width: 500px;
+    height: 500px;
     display: flex;
-    flex-wrap: wrap;
-     /*gap: 24px; Espacio entre los elementos. */
-   /* gap: 3rem;  Unidades Absolutas */
-   column-gap: 16px; /* Espacio entre los elewmtos entre la vertical */
-   row-gap: 17px;/* Espacio entre los elementos en la horizontal. */
-
-   gap: 10px 32px; /* Con dos valores, el primero es para el espacio horizontal y el segundo con el espacio vertical */
-   
+    align-items: center;
+    justify-content: space-between;
     background-color: rgb(68, 0, 255);
 }
+
+/* Aling-Self */
 
 .item {
     width: 100px;
     height: 100px;
+    
 
+    align-self: start;
   background-color: aqua;
   text-align: center;
   font-size: 24px;
   font-weight: bold;
-  border: 4px black;
+  border: 1px solid black;
+
+}
+
+/* Aling-Self -> Se pasa a uno varios elementos en particular
+
+Va a alinear en el eje transversal a ese elemento unicamente. Y sobre escribe la propiedad de aling-items y su valor si se ha declarado en el contenedor.
+
+Recibe los mismos valores que aling-item::
+
+start, end, center, stretch, basline
+*/
+
+.solito {
+    align-self: flex-end;
+    /* hieght: auto; */
 }
